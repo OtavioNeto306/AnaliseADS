@@ -13,7 +13,7 @@ Este projeto utiliza a API do Google Gemini e requer configuração de variávei
 
 2. Edite o arquivo `.env.local` e adicione sua chave da API do Gemini:
    ```
-   VITE_GEMINI_API_KEY=sua_chave_da_api_gemini_aqui
+   GEMINI_API_KEY=sua_chave_da_api_gemini_aqui
    ```
 
 3. Para obter uma chave da API do Gemini:
@@ -33,7 +33,7 @@ Este projeto utiliza a API do Google Gemini e requer configuração de variávei
 1. No dashboard do projeto na Vercel, vá em **Settings**
 2. Clique em **Environment Variables**
 3. Adicione a seguinte variável:
-   - **Name**: `VITE_GEMINI_API_KEY`
+   - **Name**: `GEMINI_API_KEY`
    - **Value**: Sua chave da API do Gemini
    - **Environments**: Selecione todos (Production, Preview, Development)
 
@@ -50,7 +50,7 @@ Após o deploy, verifique se:
 
 ### 4. Troubleshooting
 
-**Erro: "VITE_GEMINI_API_KEY não está configurada"**
+**Erro: "GEMINI_API_KEY não está configurada"**
 - Verifique se a variável foi adicionada corretamente na Vercel
 - Certifique-se de que está disponível para o ambiente correto
 - Refaça o deploy após adicionar a variável
@@ -70,5 +70,5 @@ Após o deploy, verifique se:
 
 ⚠️ **Importante:**
 - Nunca commite arquivos `.env` com chaves reais
-- Use sempre o prefixo `VITE_` para variáveis que precisam estar disponíveis no frontend
+- Variáveis sem prefixo `VITE_` são acessíveis no servidor (Node.js/Vercel)
 - Mantenha suas chaves de API seguras e não as compartilhe

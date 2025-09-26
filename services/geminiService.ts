@@ -46,10 +46,10 @@ const analysisSchema = {
 };
 
 
-const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
 if (!GEMINI_API_KEY) {
-    throw new Error('VITE_GEMINI_API_KEY não está configurada. Verifique suas variáveis de ambiente.');
+    throw new Error('GEMINI_API_KEY não está configurada. Verifique suas variáveis de ambiente.');
 }
 
 export const analyzeCreative = async (file: File): Promise<AnalysisResult> => {
